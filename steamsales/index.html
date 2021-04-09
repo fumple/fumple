@@ -1,0 +1,63 @@
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body{
+                width: 100%;
+                margin:0;
+                background: rgb(255, 187, 0);
+                background:url(steam.jpg);
+                background-position: center;
+                background-size: auto 100%;
+                font-family: Arial, Helvetica, sans-serif;
+                overflow: hidden;
+            }
+            .sale{
+                background: #4c6b22;
+                color:#a4d007;
+                width:fit-content;
+                position: absolute;
+            }
+            .sale::before{
+                content:'-'
+            }
+            .sale::after{
+                content:'%'
+            }
+            .sale.drop{
+                top:100%
+            }
+            .sale1{
+                border:5px solid transparent;
+                font-size: 40px;
+                top:-55px;
+                transition: top 2s linear;
+                z-index: 1
+            }
+        </style>
+    </head>
+    
+    <body>
+        <script>
+            function dropsale(){
+                var sale = document.createElement("div");
+                sale.classList.add("sale");
+                sale.classList.add("sale1");
+                sale.style.left = Math.random()*100+"%";
+                sale.innerHTML = Math.floor(Math.random()*98)+1
+                document.body.append(sale);
+                setTimeout(()=>{
+                    sale.classList.add("drop");
+                    setTimeout(()=>{
+                        sale.remove();
+                    }, 2200)
+                }, 500)
+            }
+            setInterval(dropsale, 25)
+        </script>
+    </body>
+    
+    </html>
+    
