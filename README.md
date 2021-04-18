@@ -1,6 +1,5 @@
 👋 Hi, I’m @fumple <br/>
 I like programming and stuff <br/>
-If you really like what I'm doing, you can always head over to my [Patreon](https://patreon.com/fumple) <br/>
  <br/>
 **Discord:** Fumple#0001
 <!---
